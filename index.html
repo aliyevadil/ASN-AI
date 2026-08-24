@@ -1,0 +1,201 @@
+vvvvvvv<!DOCTYPE html>
+<html>
+<head>
+  <title>My AI Chat</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #343541;
+      color: white;
+    }
+
+    .chat {
+      max-width: 800px;
+      margin: auto;
+      padding: 30px 20px 100px;
+    }
+
+    .message {
+      padding: 20px;
+      margin: 10px 0;
+      border-radius: 10px;
+    }
+
+    .user {
+      background: #444654;
+    }
+
+    .bot {
+      background: #343541;
+    }
+
+    .input-area {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #343541;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+    }
+
+    input {
+      width: 700px;
+      padding: 15px;
+      border-radius: 8px;
+      border: none;
+      font-size: 16px;
+    }
+
+    button {
+      margin-left: 10px;
+      padding: 15px 20px;
+      border: none;
+      border-radius: 8px;
+      background: #19c37d;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="chat" id="chat">
+    <div class="message bot">
+      Hello! I'm your AI assistant. How can I help?
+    </div>
+  </div>
+
+  <div class="input-area">
+    <input id="message" placeholder="Message..." />
+    <button onclick="sendMessage()">Send</button>
+  </div>
+
+  <script>
+    function sendMessage() {
+      const input = document.getElementById("message");
+      const chat = document.getElementById("chat");
+
+      if (input.value.trim() === "") return;
+
+      chat.innerHTML += `
+        <div class="message user">
+          ${input.value}
+        </div>
+      `;
+
+      chat.innerHTML += `
+        <div class="message bot">
+          Thanks! You sent: ${input.value}
+        </div>
+      `;
+
+      input.value = "";
+    }
+  </script>
+
+</body>
+</html><!DOCTYPE html>
+<html>
+<head>
+  <title>My AI Chat</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #343541;
+      color: white;
+    }
+
+    .chat {
+      max-width: 800px;
+      margin: auto;
+      padding: 30px 20px 100px;
+    }
+
+    .message {
+      padding: 20px;
+      margin: 10px 0;
+      border-radius: 10px;
+    }
+
+    .user {
+      background: #444654;
+    }
+
+    .bot {
+      background: #343541;
+    }
+
+    .input-area {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #343541;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+    }
+
+    input {
+      width: 700px;
+      padding: 15px;
+      border-radius: 8px;
+      border: none;
+      font-size: 16px;
+    }
+
+    button {
+      margin-left: 10px;
+      padding: 15px 20px;
+      border: none;
+      border-radius: 8px;
+      background: #19c37d;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="chat" id="chat">
+    <div class="message bot">
+      Hello! I'm your AI assistant. How can I help?
+    </div>
+  </div>
+
+  <div class="input-area">
+    <input id="message" placeholder="Message..." />
+    <button onclick="sendMessage()">Send</button>
+  </div>
+
+  <script>
+    function sendMessage() {
+      const input = document.getElementById("message");
+      const chat = document.getElementById("chat");
+
+      if (input.value.trim() === "") return;
+
+      chat.innerHTML += `
+        <div class="message user">
+          ${input.value}
+        </div>
+      `;
+
+      chat.innerHTML += `
+        <div class="message bot">
+          Thanks! You sent: ${input.value}
+        </div>
+      `;
+
+      input.value = "";
+    }
+  </script>
+
+</body>
+</html>
